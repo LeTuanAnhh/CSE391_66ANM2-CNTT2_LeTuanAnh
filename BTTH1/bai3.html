@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Điểm Sinh Viên</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        /* Định dạng các ô tiêu đề chính */
+        .header-cell {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        /* Căn lề trái cho tên sinh viên */
+        .name-cell {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" rowspan="2" class="header-cell">Student</th>
+            <th colspan="4" class="header-cell">Exam</th>
+            <th colspan="4" class="header-cell">2nd Exam</th>
+            <th colspan="2" rowspan="2" class="header-cell">Final Grade</th>
+        </tr>
+        <tr>
+            <th colspan="1">Q1</th>
+            <th colspan="1">Q2</th>
+            <th colspan="1">Q3</th>
+            <th rowspan="2">Grade</th>
+            <th colspan="1">Q1</th>
+            <th colspan="1">Q2</th>
+            <th colspan="1">Q3</th>
+            <th rowspan="2">Grade</th>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>8</th>
+            <th>7</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>NR</th>
+            <th>R</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>80549061</td>
+            <td class="name-cell">John</td>
+            <td>70%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>17.6</td>
+            <td colspan="4"></td> <td>17.6</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>80549062</td>
+            <td class="name-cell">Mary</td>
+            <td>10%</td>
+            <td>50%</td>
+            <td>50%</td>
+            <td>6.8</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>50%</td>
+            <td>16.5</td>
+            <td>16.5</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>80549063</td>
+            <td class="name-cell">Claire</td>
+            <td colspan="4"></td> <td>50%</td>
+            <td>50%</td>
+            <td>50%</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>10</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
