@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Info Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 13px; color: #333; line-height: 1.6; background-color: #f4f4f4; padding: 20px; }
+        .form-container { background: white; width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        .section-title { font-weight: bold; border-bottom: 1px solid #333; margin-bottom: 15px; padding-bottom: 2px; }
+        
+        .form-group { display: flex; margin-bottom: 8px; align-items: flex-start; }
+        .form-group label { width: 150px; font-weight: bold; flex-shrink: 0; }
+        
+        .input-field { flex-grow: 1; padding: 3px; border: 1px solid #777; width: 100%; box-sizing: border-box; }
+        .radio-group { display: flex; flex-direction: column; }
+        .radio-item { display: flex; align-items: center; margin-bottom: 2px; }
+        
+        .notes-editor { border: 1px solid #ccc; width: 100%; }
+        .editor-toolbar { background: #f0f0f0; border-bottom: 1px solid #ccc; padding: 5px; display: flex; gap: 5px; flex-wrap: wrap; }
+        .editor-content { padding: 10px; min-height: 100px; border: none; width: 100%; box-sizing: border-box; font-family: "Times New Roman", serif; font-size: 16px; }
+        
+        .captcha { font-family: "Courier New", Courier, monospace; font-size: 24px; letter-spacing: 5px; margin-bottom: 5px; }
+        .footer { border-top: 1px solid #ccc; padding-top: 10px; display: flex; justify-content: space-between; margin-top: 20px; }
+        
+        button { padding: 5px 15px; cursor: pointer; }
+        .btn-submit { background: #444; color: white; border: none; }
+        .btn-cancel { background: #eee; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="section-title">Basic Info</div>
+    <div class="form-group">
+        <label>Employee ID</label>
+        <span>9</span>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <span>Dodsworth</span>
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="input-field" value="Anne">
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+            <label class="radio-item"><input type="radio" name="gender"> Male</label>
+            <label class="radio-item"><input type="radio" name="gender"> Female</label>
+            <label class="radio-item"><input type="radio" name="gender"> XXX</label>
+            <label class="radio-item"><input type="radio" name="gender" checked> ZZZ</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="input-field" value="Sales Representative">
+    </div>
+    <div class="form-group">
+        <label>Suffix</label>
+        <input type="text" class="input-field" value="Ms.">
+    </div>
+    <div class="form-group">
+        <label>BirthDate</label>
+        <div style="display: flex; width: 100%;">
+            <input type="text" class="input-field" value="1969-07-02 00:00:00">
+            <span style="margin-left: 5px; cursor: help;">(?)</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>HireDate</label>
+        <input type="text" class="input-field" value="1994-11-15 00:00:00">
+    </div>
+    <div class="form-group">
+        <label>SSN # (if applicable)</label>
+        <input type="text" class="input-field">
+    </div>
+    <div class="form-group">
+        <label>Reports To</label>
+        <select class="input-field" style="width: auto;">
+            <option>Buchanan</option>
+        </select>
+    </div>
+
+    <div class="section-title">Contact Info</div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="input-field" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="input-field" value="7 Houndstooth Rd.">
+    </div>
+    <div class="form-group">
+        <label>City</label>
+        <input type="text" class="input-field" value="London">
+    </div>
+    <div class="form-group">
+        <label>Region</label>
+        <input type="text" class="input-field">
+    </div>
+    <div class="form-group">
+        <label>Postal Code</label>
+        <input type="text" class="input-field" value="WG2 7LT">
+    </div>
+    <div class="form-group">
+        <label>Country</label>
+        <select class="input-field" style="width: auto;">
+            <option>Russian Federation</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>US Home Phone</label>
+        <input type="text" class="input-field" value="(234)234-2342">
+    </div>
+    <div class="form-group">
+        <label>Photo</label>
+        <input type="text" class="input-field" value="EmpID9.bmp">
+    </div>
+
+    <div class="section-title">Optional Info</div>
+    <div class="form-group">
+        <label>Notes</label>
+        <div class="notes-editor">
+            <div class="editor-toolbar">
+                <b>B</b> <i>I</i> <u>S</u> 🔗 🖼️ | H1 H2 H3 | 📋
+            </div>
+            <textarea class="editor-content">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Preferred Shift</label>
+        <div>
+            <label><input type="checkbox"> Regular</label><br>
+            <label><input type="checkbox" checked> Gravy Yard</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Active?</label>
+        <input type="checkbox" checked>
+    </div>
+    <div class="form-group">
+        <label>Are you human?</label>
+        <div style="flex-grow: 1;">
+            <div class="captcha">T I D A W O</div>
+            <div style="font-size: 11px; margin-bottom: 5px; cursor: pointer;">Click to change</div>
+            <input type="text" class="input-field">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>◀ ▶<br><span style="font-size: 10px;">* required</span></div>
+        <div>
+            <button class="btn-submit">💾 Submit</button>
+            <button class="btn-cancel">✖ Cancel</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
