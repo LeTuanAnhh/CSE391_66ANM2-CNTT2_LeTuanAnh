@@ -1,0 +1,107 @@
+/* --- PHẦN HERO (ẢNH NỀN BIỂN) --- */
+#hero {
+    height: 85vh;
+    /* Lưu ý: ocean.jpg của bạn đang nằm trong thư mục images */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('images/ocean.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero-content {
+    background-color: rgba(51, 47, 47, 0.7);
+    padding: 50px 80px;
+    border-radius: 15px;
+    color: white;
+}
+
+#hero-content h1 {
+    font-family: 'Raleway', sans-serif; /* */
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#hero-content a {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+/* --- PHẦN HIGHLIGHTS (3 ĐỊA ĐIỂM) --- */
+#highlights {
+    padding: 60px 10%;
+    background-color: #e0f2f1;
+    text-align: center;
+}
+
+#highlights h2 {
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+#destinations {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.destination {
+    flex: 1;
+}
+
+.destination img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.destination p {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #00796b;
+}
+
+/* --- FOOTER: SỬA LỖI ICON ĐEN --- */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+   
+    filter: brightness(0) invert(1); 
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+
+
