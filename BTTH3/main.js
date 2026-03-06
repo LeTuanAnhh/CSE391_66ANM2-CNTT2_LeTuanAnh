@@ -1,0 +1,46 @@
+console.log("Hello from JavaScript!");
+let name = "Anh";
+let yearOfBirth = 2004;
+let currentYear = 2026;
+let age = currentYear - yearOfBirth;
+console.log("Xin chào, mình là " + name + ", năm nay mình " + age + " tuổi.");
+
+let score = 6; // Bạn sẽ thay đổi con số này để thử nghiệm
+
+if (score >= 8) {
+  console.log("Giỏi");
+} else if (score >= 6.5) {
+  console.log("Khá");
+} else if (score >= 5) {
+  console.log("Trung bình");
+} else {
+  console.log("Yếu");
+}
+
+function tinhDiemTrungBinh(m1, m2, m3) {
+  let avg = (m1 + m2 + m3) / 3;
+  return avg; // Trả về kết quả tính toán
+}
+
+function xepLoai(avg) {
+  if (avg >= 8) {
+    return "Giỏi";
+  } else if (avg >= 6.5) {
+    return "Khá";
+  } else if (avg >= 5) {
+    return "Trung bình";
+  } else {
+    return "Yếu";
+  }
+}
+
+function kiemTraTuoi(age) {
+  if (age >= 18) {
+    console.log("Đủ 18 tuổi");
+  } else {
+    console.log("Chưa đủ 18 tuổi");
+  }
+}
+
+// Thử gọi hàm:
+kiemTraTuoi(20); // Sẽ in ra: Đủ 18 tuổi
