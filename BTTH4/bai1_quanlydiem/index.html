@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý điểm sinh viên - Bài 1.2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-card">
+        <h2 class="title">Quản lý điểm sinh viên</h2>
+        
+        <div class="input-section">
+            <div class="field">
+                <input type="text" id="txtName" placeholder="Họ tên sinh viên">
+            </div>
+            <div class="field">
+                <input type="number" id="txtScore" placeholder="Điểm (0-10)" min="0" max="10">
+            </div>
+            <button id="btnAdd">Thêm sinh viên</button>
+        </div>
+
+        <hr style="margin-bottom: 20px; border: 0; border-top: 1px solid #eee;">
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="txtSearch" placeholder="🔍 Tìm tên sinh viên...">
+            </div>
+            <div class="filter-box">
+                <select id="selRank">
+                    <option value="All">-- Tất cả xếp loại --</option>
+                    <option value="Giỏi">Giỏi</option>
+                    <option value="Khá">Khá</option>
+                    <option value="Trung bình">Trung bình</option>
+                    <option value="Yếu">Yếu</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ tên</th>
+                        <th id="sortScore" class="sortable">Điểm ↕</th>
+                        <th>Xếp loại</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="dashboard">
+            <div class="stat-box">
+                <span class="stat-label">Đang hiển thị:</span>
+                <span id="totalStudents" class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Điểm TB (hiện tại):</span>
+                <span id="avgScore" class="stat-value">0.0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
